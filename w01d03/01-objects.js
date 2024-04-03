@@ -36,5 +36,3 @@ console.log(studentOneObj);
 
 // objects => collections of key/value pairs
 // dictionaries, hashes, associative arrays
-
-
