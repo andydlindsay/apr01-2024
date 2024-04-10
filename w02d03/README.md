@@ -5,71 +5,28 @@
 - [x] TCP introduction
 - [x] TCP demo
 
-### Networking
-* computers/machines being able to communicate with one another
+### What is networking?
+- Communication between machines on a network
 
-### Internet Protocol (IP)
-* every computer gets a unique address
-* IPv4: 192.168.8.8 127.0.0.1
-* IPv6: 2001:db8:3333:4444:5555:6666:7777:8888
-* street address
-* port number (apt number)
-* 65,535 ports to choose from
-  * 80 HTTP
-  * 443 HTTPS
-  * 22 SSH
-  * 5432 Postgres (database)
-  * 3000 - 8000 dev ports
+### What is a protocol?
+- A defined standard for how requests and responses are sent between network devices
 
-### Sending Messages
-* broken into packets
-* packet contains a header
-  * who is the sender
-  * who is the destination
-* all packets are the same size
+### Transport Layer Protocols
+- Break data into packets to be sent over the network layer
+- Give each packet a header with origin and destination
+- **UDP**: **U**ser **D**atagram **P**rotocol
+  - Smaller header size (8 bytes) which results in smaller packet sizes
+  - _Connectionless_ ie. there is no need to establish or maintain a connection
+  - No error recovery (any corrupted packets are discarded)
+  - Packets can arrive in any order
+  - Useful for streaming/low latency applications
+- **TCP**: **T**ransmission **C**ontrol **P**rotocol
+  - Larger header size (20 bytes)
+  - Requires a connection (3-way handshake)
+  - Corrupted packets are reported to the server and are re-sent
+  - Packets arrive in order
+  - Useful when guaranteed communication is needed
 
-### TCP Transmission Control Protocol
-* larger headers and more information
-* requires a connection - triple handshake
-* error recovery
-* packets are reordered on arrival
-
-### UDP User Datagram Protocol
-* smaller header sizes
-* connectionless protocol
-* no error recovery
-* packets arrive in any order
-
-
-* clients => want something
-* servers => have something
-
-### Event-driven Programming
-* program against events that may or may not occur
-* when the event occurs, call my callback function
-
-
-```js
-connection.write('Move: up');
-connection.write('Move: left');
-
-connection.write('Name: ALI');
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Useful Links
+* [OSI Model](https://en.wikipedia.org/wiki/OSI_model)
+* [Net package documentation](https://nodejs.org/api/net.html)
