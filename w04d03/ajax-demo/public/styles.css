@@ -1,0 +1,19 @@
+.food-item {
+  border: 2px solid darkgreen;
+  border-radius: 15px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.food-item header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: green;
+}
+
+.food-item footer {
+  display: flex;
+  justify-content: space-between;
+  color: purple;
+}
