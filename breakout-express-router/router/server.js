@@ -6,9 +6,15 @@ const morgan = require('morgan');
 const app = express();
 const port = process.env.PORT || 3000;
 
-require('./database/connect').query('SELECT * FROM products').then(console.log);
-
 app.use(morgan('dev'));
+
+// require the routers
+const productRouter = require('./routes/product-router');
+const blogpostRouter = require('./routes/blogpost-router');
+
+// use the routers
+app.use('/api/admin/products', productRouter);
+app.use('/blogposts', blogpostRouter);
 
 app.listen(port, () => {
   console.log(`app listening on port ${port}`);
