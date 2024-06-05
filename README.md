@@ -12,3 +12,4 @@
 * [W07D05 - Custom Hooks](/w07d05)
 * [W08D03 - Unit & Integration Testing](/w08d03)
 * [W08D05 - Intro to Ruby](/w08d05)
+* [W10D03 - Intro to TypeScript](/w10d03)
