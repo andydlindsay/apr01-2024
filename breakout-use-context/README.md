@@ -17,10 +17,10 @@
 * The `.createContext` method is used to create the context
 
 ```js
-import {useContext} from 'react';
+import {createContext} from 'react';
 
 // context is typically capitalized
-const MyContext = useContext(null); // establish a default value if wanted
+const MyContext = createContext(null); // establish a default value if wanted
 
 export default MyContext; // export the context to be imported by other components
 ```
